@@ -1,0 +1,15 @@
+.parent:hover > * {
+  opacity: 0.5;
+}
+
+.parent:hover > *:hover {
+  opacity: 1;
+}
+
+.parent {
+  pointer-events: none;
+}
+
+.parent > * {
+  pointer-events: auto;
+}
