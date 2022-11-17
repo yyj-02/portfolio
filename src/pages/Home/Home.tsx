@@ -3,12 +3,22 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import Typewriter from "typewriter-effect";
 import styles from "./Home.module.css";
-import { projects, languages, technologies } from "../../database/db";
+import { projects, languages, technologies, jobs } from "../../database/db";
+import {
+  github,
+  instagram,
+  layered_wave,
+  linkedin,
+  mail,
+  wave,
+} from "../../assets/Home";
+import resume from "../../assets/YeohYongJie_resume.pdf";
 
 import ProjectsTemplate from "../../components/templates/ProjectsTemplate";
 
 import { openInNewTab } from "../../commons";
 import SkillsTemplate from "../../components/templates/SkillsTemplate";
+import ExperienceTemplate from "../../components/templates/ExperienceTemplate";
 
 const Home = () => {
   return (
@@ -52,19 +62,19 @@ const Home = () => {
               className="transition duration-200 ease-in-out active:scale-90"
               onClick={openInNewTab("https://www.linkedin.com/in/yeohyongjie/")}
             >
-              <img src="src/assets/linkedin.svg" className="inline h-10 mr-4" />
+              <img src={linkedin} className="inline h-10 mr-4" />
             </button>
             <button
               className="transition duration-200 ease-in-out active:scale-90"
               onClick={openInNewTab("https://github.com/yyj-02/")}
             >
-              <img src="src/assets/github.svg" className="inline h-10 mx-4" />
+              <img src={github} className="inline h-10 mx-4" />
             </button>
             <button
               className="transition duration-200 ease-in-out active:scale-90"
               onClick={openInNewTab("mailto:yeohyongjie@outlook.com")}
             >
-              <img src="src/assets/mail.png" className="inline h-10 mx-4" />
+              <img src={mail} className="inline h-10 mx-4" />
             </button>
             <button
               className="transition duration-200 ease-in-out active:scale-90"
@@ -72,19 +82,19 @@ const Home = () => {
                 "https://www.instagram.com/littlebean.yeoh/"
               )}
             >
-              <img
-                src="src/assets/instagram.svg"
-                className="inline h-10 ml-4"
-              />
+              <img src={instagram} className="inline h-10 ml-4" />
             </button>
           </div>
         </div>
       </div>
-      <div id="projects" className="min-h-screen py-5 md:px-5 lg:px-10">
+      <div
+        id="projects"
+        className="min-h-screen py-5 md:px-5 lg:px-10 bg-[#2a303c]"
+      >
         <ProjectsTemplate title="My Projects" projects={projects} />
       </div>
       <img
-        src="src/assets/layered_wave.svg"
+        src={layered_wave}
         className="w-full max-h-40 aspect-[5/1] object-cover"
       />
       <div className="h-screen min-h-screen py-5 md:px-5 lg:px-10 bg-[#5f6d88]">
@@ -93,6 +103,30 @@ const Home = () => {
           languages={languages}
           technologies={technologies}
         />
+      </div>
+      <img src={wave} className="w-full max-h-40 aspect-[5/1] object-cover" />
+      <div className="min-h-screen py-5 md:px-5 lg:px-10 bg-[#2a303c]">
+        <ExperienceTemplate title="My Experience" experiences={jobs} />
+      </div>
+      <div className="md:px-5 lg:px-10 bg-[#2a303c]">
+        <div className="flex flex-col items-center text-white translate-y-1/2">
+          <div className="my-5 text-2xl lg:text-4xl font-semibold">
+            Want to know more?
+          </div>
+          <div
+            className={`${styles["resume-btn"]} btn btn-wide btn-outline font-normal border-orange-300 hover:border-none hover:bg-orange-300 text-orange-300 hover:text-[#2a303c]`}
+            onClick={openInNewTab(resume)}
+          >
+            <span
+              className={`${styles.arrow} ${styles["arrow-spacer"]}`}
+            ></span>
+            View my resume&nbsp;&nbsp;&nbsp;
+            <span
+              className={`${styles.arrow} ${styles["arrow-orange"]}`}
+            ></span>
+          </div>
+        </div>
+        <div className="h-[50vh]"></div>
       </div>
     </>
   );

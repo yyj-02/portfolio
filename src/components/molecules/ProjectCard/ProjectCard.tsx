@@ -1,4 +1,5 @@
 import { Project, Technology } from "../../../commons";
+import { link_image } from "../../../assets/Home";
 import style from "./projectCard.module.css";
 
 import { openInNewTab } from "../../../commons";
@@ -27,7 +28,7 @@ const ProjectCard: React.FC<Project> = (props) => {
               className="transition duration-200 ease-in-out active:scale-90"
               onClick={openInNewTab(props.url)}
             >
-              <img src="src/assets/link.svg" className="inline h-8 ml-4" />
+              <img src={link_image} className="inline h-8 ml-4" />
             </button>
           )}
           {props.github && (
@@ -35,7 +36,7 @@ const ProjectCard: React.FC<Project> = (props) => {
               className="transition duration-200 ease-in-out active:scale-90"
               onClick={openInNewTab(props.github)}
             >
-              <img src="src/assets/github.svg" className="inline h-8 ml-4" />
+              <img src={link_image} className="inline h-8 ml-4" />
             </button>
           )}
         </div>

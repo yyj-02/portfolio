@@ -31,3 +31,12 @@ export interface Logo {
 }
 
 export type Logos = Logo[];
+export interface Experience {
+  company: string;
+  position: string;
+  duration: string;
+  description: string;
+  img: string;
+}
+
+export type Experiences = Experience[];

@@ -19,7 +19,7 @@ const ProjectsTemplate: React.FC<props> = (props) => {
         <SkillBanner title="Languages I code in 💻" items={props.languages} />
         <br />
         <SkillBanner
-          title="Technologies I used recently 🔨"
+          title="Technologies I used 🔨"
           items={props.technologies}
         />
       </div>
