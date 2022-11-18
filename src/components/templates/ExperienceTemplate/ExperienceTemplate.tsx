@@ -2,7 +2,6 @@ import React, { useCallback } from "react";
 import { useEffect, useRef, RefObject } from "react";
 import { Experiences } from "../../../commons";
 import style from "./experienceTemplate.module.css";
-
 interface props {
   title: string;
   experiences: Experiences;
@@ -13,15 +12,18 @@ const ExperienceTemplate: React.FC<props> = (props) => {
   const cards = useRef();
 
   const updateLine = () => {
-    const first_children_height =
+    const first_children_height = // @ts-ignore
       cards.current.children[0].children[0].offsetHeight;
-    const last_children_height =
+    const last_children_height = // @ts-ignore
       cards.current.lastChild.children[0].offsetHeight;
+    // @ts-ignore
     line.current.style.height = `${
+      // @ts-ignore
       cards.current.offsetHeight -
       first_children_height / 2 -
       last_children_height / 2
     }px`;
+    // @ts-ignore
     cards.current.style.transform = `translate(0px, -${
       first_children_height / 2
     }px)`;
@@ -29,11 +31,13 @@ const ExperienceTemplate: React.FC<props> = (props) => {
 
   const updateGradient = (event) => {
     const scrolled = -(
-      line.current.getBoundingClientRect()["top"] -
-      window.innerHeight / 2
+      // @ts-ignore
+      (line.current.getBoundingClientRect()["top"] - window.innerHeight / 2)
     );
+    // @ts-ignore
     const full = line.current.offsetHeight;
     const percentage = (scrolled / full) * 100;
+    // @ts-ignore
     line.current.style.background = `linear-gradient(180deg, rgba(54,1,103,1) 0%, rgba(251,140,171,1) ${percentage}%, rgba(255,255,255,1) ${
       percentage + 0.01
     }%, rgba(255,255,255,1) 100%)`;
@@ -41,27 +45,32 @@ const ExperienceTemplate: React.FC<props> = (props) => {
   };
 
   useEffect(() => {
-    const first_children_height =
-      cards.current.children[0].children[0].offsetHeight;
-    const last_children_height =
-      cards.current.lastChild.children[0].offsetHeight;
-    line.current.style.height = `${
-      cards.current.offsetHeight -
-      first_children_height / 2 -
-      last_children_height / 2
-    }px`;
-    cards.current.style.transform = `translate(0px, -${
-      first_children_height / 2
-    }px)`;
-    window.addEventListener("resize", updateLine);
-    window.addEventListener("scroll", updateGradient);
+    if (cards.current && line.current) {
+      const first_children_height = // @ts-ignore
+        cards.current.children[0].children[0].offsetHeight;
+      const last_children_height = // @ts-ignore
+        cards.current.lastChild.children[0].offsetHeight;
+      // @ts-ignore
+      line.current.style.height = `${
+        // @ts-ignore
+        cards.current.offsetHeight -
+        first_children_height / 2 -
+        last_children_height / 2
+      }px`;
+      // @ts-ignore
+      cards.current.style.transform = `translate(0px, -${
+        first_children_height / 2
+      }px)`;
+      window.addEventListener("resize", updateLine);
+      window.addEventListener("scroll", updateGradient);
+    }
   }, []);
 
   return (
     <div className="relative h-full flex flex-col items-center">
-      <div className="absolute top-0 left-0 text-2xl sm:text-3xl md:text-5xl font-bold text-white my-5 pl-5">
+      <h2 className="absolute top-0 left-0 text-2xl sm:text-3xl md:text-5xl font-bold text-white my-5 pl-5">
         {props.title}
-      </div>
+      </h2>
       <div className={style.spacer}></div>
       <div className="text-white relative">
         <div
@@ -74,6 +83,7 @@ const ExperienceTemplate: React.FC<props> = (props) => {
               <div className="justify-start lg:justify-center flex flex-row items-center">
                 <div className="hidden lg:flex opacity-0 flex-row items-center">
                   <img
+                    alt={experience.company}
                     src={experience.img}
                     className="h-24 mr-3 mb-3 md:mb:0 bg-white w-24 p-2 rounded-lg"
                   />
@@ -98,6 +108,7 @@ const ExperienceTemplate: React.FC<props> = (props) => {
                 <div className="m-3 rounded-full lg:m-5 w-5 h-5 bg-white"></div>
                 <div className="flex-col items-start flex md:flex-row md:items-center">
                   <img
+                    alt={experience.company}
                     src={experience.img}
                     className="h-24 mr-0 md:mr-3 mb-3 md:mb-0 bg-white w-24 p-2 rounded-lg"
                   />

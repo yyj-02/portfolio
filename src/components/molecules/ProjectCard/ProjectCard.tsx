@@ -9,7 +9,7 @@ const ProjectCard: React.FC<Project> = (props) => {
     <div className="card xl:card-side shadow-xl bg-stone-100 xl:aspect-video">
       <figure className="xl:w-3/4 xl:h-full h-96">
         <div className="w-full h-full flex align-middle justify-center">
-          <img src={props.img} className="object-contain" />
+          <img alt={props.title} src={props.img} className="object-contain" />
         </div>
       </figure>
       <div className="card-body xl:max-w-xs">
@@ -28,7 +28,11 @@ const ProjectCard: React.FC<Project> = (props) => {
               className="transition duration-200 ease-in-out active:scale-90"
               onClick={openInNewTab(props.url)}
             >
-              <img src={link_image} className="inline h-8 ml-4" />
+              <img
+                alt={`Link to ${props.title}`}
+                src={link_image}
+                className="inline h-8 ml-4"
+              />
             </button>
           )}
           {props.github && (
@@ -36,7 +40,11 @@ const ProjectCard: React.FC<Project> = (props) => {
               className="transition duration-200 ease-in-out active:scale-90"
               onClick={openInNewTab(props.github)}
             >
-              <img src={link_image} className="inline h-8 ml-4" />
+              <img
+                alt={`Link to ${props.title} repository`}
+                src={link_image}
+                className="inline h-8 ml-4"
+              />
             </button>
           )}
         </div>

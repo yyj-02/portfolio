@@ -10,9 +10,9 @@ interface props {
 const ProjectsTemplate: React.FC<props> = (props) => {
   return (
     <>
-      <div className="text-2xl sm:text-3xl md:text-5xl font-bold text-white my-5 pl-5">
+      <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white my-5 pl-5">
         {props.title}
-      </div>
+      </h2>
       <ProjectCards projects={props.projects} />
     </>
   );

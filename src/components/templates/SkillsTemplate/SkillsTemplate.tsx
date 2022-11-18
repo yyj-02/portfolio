@@ -12,9 +12,9 @@ interface props {
 const ProjectsTemplate: React.FC<props> = (props) => {
   return (
     <div className="h-full relative">
-      <div className="absolute top-0 left-0 text-2xl sm:text-3xl md:text-5xl font-bold text-white my-5 pl-5">
+      <h2 className="absolute top-0 left-0 text-2xl sm:text-3xl md:text-5xl font-bold text-white my-5 pl-5">
         {props.title}
-      </div>
+      </h2>
       <div className="h-full flex flex-col align-middle px-5 justify-center grow">
         <SkillBanner title="Languages I code in 💻" items={props.languages} />
         <br />

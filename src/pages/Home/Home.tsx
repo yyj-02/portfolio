@@ -25,11 +25,11 @@ const Home = () => {
     <>
       <div className={`${styles.background}`}>
         <div className={`md-flex m-5 md:m-10 lg:pl-5 ${styles.profile}`}>
-          <div className="my-5 text-4xl lg:text-7xl font-bold">
+          <h1 className="my-5 text-4xl lg:text-7xl font-bold">
             Hi! I'm Yong Jie.
-          </div>
+          </h1>
           <div className="my-5 text-2xl lg:text-4xl font-semibold md-flex flex-row">
-            <div className="inline-block">I am a&nbsp;</div>
+            <h2 className="inline-block">I am a&nbsp;</h2>
             <div className="text-orange-600 inline-block">
               <Typewriter
                 options={{
@@ -62,19 +62,31 @@ const Home = () => {
               className="transition duration-200 ease-in-out active:scale-90"
               onClick={openInNewTab("https://www.linkedin.com/in/yeohyongjie/")}
             >
-              <img src={linkedin} className="inline h-10 mr-4" />
+              <img
+                alt="Yong Jie's LinkedIn"
+                src={linkedin}
+                className="inline h-10 mr-4"
+              />
             </button>
             <button
               className="transition duration-200 ease-in-out active:scale-90"
               onClick={openInNewTab("https://github.com/yyj-02/")}
             >
-              <img src={github} className="inline h-10 mx-4" />
+              <img
+                alt="Yong Jie's GitHub"
+                src={github}
+                className="inline h-10 mx-4"
+              />
             </button>
             <button
               className="transition duration-200 ease-in-out active:scale-90"
               onClick={openInNewTab("mailto:yeohyongjie@outlook.com")}
             >
-              <img src={mail} className="inline h-10 mx-4" />
+              <img
+                alt="Yong Jie's Email"
+                src={mail}
+                className="inline h-10 mx-4"
+              />
             </button>
             <button
               className="transition duration-200 ease-in-out active:scale-90"
@@ -82,7 +94,11 @@ const Home = () => {
                 "https://www.instagram.com/littlebean.yeoh/"
               )}
             >
-              <img src={instagram} className="inline h-10 ml-4" />
+              <img
+                alt="Yong Jie's Instagram"
+                src={instagram}
+                className="inline h-10 ml-4"
+              />
             </button>
           </div>
         </div>
