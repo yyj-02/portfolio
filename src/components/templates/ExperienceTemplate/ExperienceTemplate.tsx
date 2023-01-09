@@ -1,5 +1,4 @@
-import React, { useCallback } from "react";
-import { useEffect, useRef, RefObject } from "react";
+import React, { useEffect, useRef, RefObject } from "react";
 import { Experiences } from "../../../commons";
 import style from "./experienceTemplate.module.css";
 interface props {

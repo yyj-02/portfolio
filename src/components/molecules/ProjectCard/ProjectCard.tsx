@@ -21,6 +21,7 @@ const ProjectCard: React.FC<Project> = (props) => {
 
     return () => observer.unobserve(domRef.current);
   }, []);
+
   return (
     <div
       ref={domRef}
