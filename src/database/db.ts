@@ -4,6 +4,7 @@ import {
   cca,
   footfall,
   lumo,
+  taxi,
 } from "../assets/projectImages/Projects";
 
 import {
@@ -17,8 +18,11 @@ import {
   java,
   js,
   mongo,
+  postgresql,
   python,
+  rails,
   react,
+  ruby,
   socket,
   tailwind,
   ts,
@@ -65,6 +69,14 @@ export const projects: Projects = [
     technologies: [Technology.typescript, Technology.vue, Technology.firebase],
     url: "https://github.com/yyj-02/CCA-Management-System",
   },
+  {
+    title: "Taxi Optimization with Data Science",
+    description:
+      "Created an algorithm to optimize taxi services in Singapore by predicting taxi demand and searching for the least cost method to reallocate the taxis.",
+    img: taxi,
+    technologies: [Technology.tableau, Technology["c++"], Technology.python],
+    url: "https://medium.com/budding-data-scientists/final-report-the-optimization-of-taxi-services-in-singapore-through-data-analysis-b5ab7263672d",
+  },
 ];
 
 export const languages: Logos = [
@@ -72,16 +84,19 @@ export const languages: Logos = [
   { name: "Javascript", img: js },
   { name: "Dart", img: dart },
   { name: "Python", img: python },
+  { name: "Ruby", img: ruby },
   { name: "Java", img: java },
   { name: "C++", img: c },
 ];
 
 export const technologies: Logos = [
   { name: "Express", img: express },
-  { name: "MongoDB", img: mongo },
+  { name: "Rails", img: rails },
   { name: "React", img: react },
   { name: "Vue", img: vue },
   { name: "Tailwind CSS", img: tailwind },
+  { name: "PostgreSQL", img: postgresql },
+  { name: "MongoDB", img: mongo },
   { name: "Flutter", img: flutter },
   { name: "Firebase", img: firebase },
   { name: "Google Cloud Platform", img: gcp },
@@ -109,7 +124,7 @@ export const jobs: Experiences = [
   {
     company: "NodeFlair",
     position: "Software Engineer Intern",
-    duration: "Starting in Dec 2022",
+    duration: "Dec 2022 - Present",
     description:
       "Incoming software engineer intern at NodeFlair, a job portal for tech talents in Singapore.",
     img: nodeflair,

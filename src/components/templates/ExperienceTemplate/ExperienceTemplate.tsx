@@ -107,11 +107,13 @@ const ExperienceTemplate: React.FC<props> = (props) => {
                 </div>
                 <div className="m-3 rounded-full lg:m-5 w-5 h-5 bg-white"></div>
                 <div className="flex-col items-start flex md:flex-row md:items-center">
-                  <img
-                    alt={experience.company}
-                    src={experience.img}
-                    className="h-24 mr-0 md:mr-3 mb-3 md:mb-0 bg-white w-24 p-2 rounded-lg"
-                  />
+                  <div className="h-24 mr-0 md:mr-3 mb-3 md:mb-0 bg-white w-24 p-2 rounded-lg">
+                    <img
+                      alt={experience.company}
+                      src={experience.img}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
                   <div className="group relative md:max-w-auto sm:max-w-md max-w-xs">
                     <div className="md:group-hover:opacity-0 transition-all duration-500">
                       <div className="text-xl font-semibold mb-3">

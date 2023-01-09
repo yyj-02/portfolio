@@ -8,8 +8,11 @@ import gcp from "./gcp.png";
 import java from "./java.png";
 import js from "./js.png";
 import mongo from "./mongo.png";
+import postgresql from "./postgresql.svg";
 import python from "./python.png";
+import rails from "./rails.svg";
 import react from "./react.png";
+import ruby from "./ruby.svg";
 import socket from "./socket.png";
 import tailwind from "./tailwind.png";
 import ts from "./ts.png";
@@ -26,8 +29,11 @@ export {
   java,
   js,
   mongo,
+  postgresql,
   python,
+  rails,
   react,
+  ruby,
   socket,
   tailwind,
   ts,

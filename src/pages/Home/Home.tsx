@@ -110,6 +110,7 @@ const Home = () => {
         <ProjectsTemplate title="My Projects" projects={projects} />
       </div>
       <img
+        alt=""
         src={layered_wave}
         className="w-full max-h-40 aspect-[5/1] object-cover"
       />
@@ -120,7 +121,11 @@ const Home = () => {
           technologies={technologies}
         />
       </div>
-      <img src={wave} className="w-full max-h-40 aspect-[5/1] object-cover" />
+      <img
+        alt=""
+        src={wave}
+        className="w-full max-h-40 aspect-[5/1] object-cover"
+      />
       <div className="min-h-screen py-5 md:px-5 lg:px-10 bg-[#2a303c]">
         <ExperienceTemplate title="My Experience" experiences={jobs} />
       </div>

@@ -1,0 +1,9 @@
+File from: [./src/assets/logos/mongo.png]
+
+File to: [build/img/logos/mongo.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: /home/yongjie/hungry-bear/frontend/node_modules/pngquant-bin/vendor/pngquant --quality=20-50 -o build/img/logos/mongo.png ./src/assets/logos/mongo.png
+  error: Not a PNG file (libpng failed)
+  error: cannot decode image mongo.png

@@ -11,6 +11,8 @@ export enum Technology {
   "typescript",
   "tensorflow",
   "GCP",
+  "tableau",
+  "c++",
 }
 
 export type Technologies = Technology[];
