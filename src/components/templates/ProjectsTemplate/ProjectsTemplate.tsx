@@ -20,44 +20,7 @@ const ProjectsTemplate: React.FC<props> = (props) => {
 
 ProjectsTemplate.defaultProps = {
   title: "Demo",
-  projects: [
-    {
-      title: "Demo",
-      description: "Demo",
-      img: "src/assets/portrait.jpg",
-      technologies: [
-        Technology.docker,
-        Technology.flutter,
-        Technology.express,
-        Technology.firebase,
-      ],
-      url: "test",
-    },
-    {
-      title: "Demo",
-      description: "Demo",
-      img: "src/assets/portrait.jpg",
-      technologies: [
-        Technology.docker,
-        Technology.flutter,
-        Technology.express,
-        Technology.firebase,
-      ],
-      url: "test",
-    },
-    {
-      title: "Demo",
-      description: "Demo",
-      img: "src/assets/portrait.jpg",
-      technologies: [
-        Technology.docker,
-        Technology.flutter,
-        Technology.express,
-        Technology.firebase,
-      ],
-      url: "test",
-    },
-  ],
+  projects: [],
 };
 
 export default ProjectsTemplate;

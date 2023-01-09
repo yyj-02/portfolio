@@ -5,7 +5,6 @@ import wave from "./wave.svg";
 import link_image from "./link.svg";
 import linkedin from "./linkedin.svg";
 import mail from "./mail.png";
-import portrait from "./portrait.jpg";
 import whiteWall from "./whiteWall.jpg";
 
 export {
@@ -16,6 +15,5 @@ export {
   link_image,
   linkedin,
   mail,
-  portrait,
   whiteWall,
 };
