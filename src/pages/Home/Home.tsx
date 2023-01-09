@@ -41,11 +41,13 @@ const Home = () => {
             </div>
           </div>
           <p className="my-5 lg:text-xl">
-            I am a Computer Science student in the National University of
-            Singapore. I like to explore new technologies and learn quality
-            code. Currently, I can code in Typescript, Java and Python. Besides
-            coding, I also enjoy playing squash and badminton. Let's connect if
-            you are interested!
+            As a computer science student and avid technology enthusiast, I am
+            constantly learning and growing my skills. Proficient in Typescript,
+            Java, and Python, I have completed coursework and personal projects
+            that have strengthened my technical abilities. In my spare time, I
+            enjoy staying active through sports like squash and badminton. If
+            you share my passion for technology and are looking to connect,
+            please don't hesitate to reach out!
           </p>
           <HashLink smooth to="/#projects">
             <button
@@ -134,7 +136,8 @@ const Home = () => {
           <div className="my-5 text-2xl lg:text-4xl font-semibold">
             Want to know more?
           </div>
-          <div
+          <button
+            title="resume"
             className={`${styles["resume-btn"]} btn btn-wide btn-outline font-normal border-orange-300 hover:border-none hover:bg-orange-300 text-orange-300 hover:text-[#2a303c]`}
             onClick={openInNewTab(resume)}
           >
@@ -145,7 +148,7 @@ const Home = () => {
             <span
               className={`${styles.arrow} ${styles["arrow-orange"]}`}
             ></span>
-          </div>
+          </button>
         </div>
         <div className="h-[50vh]"></div>
       </div>
