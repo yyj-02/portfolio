@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import { Project, Technology } from "../../../commons";
 import { link_image } from "../../../assets/Home";
 import style from "./projectCard.module.css";
@@ -5,8 +6,28 @@ import style from "./projectCard.module.css";
 import { openInNewTab } from "../../../commons";
 
 const ProjectCard: React.FC<Project> = (props) => {
+  const [isVisible, setVisible] = useState(true);
+  const domRef = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        setVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+    observer.observe(domRef.current);
+
+    return () => observer.unobserve(domRef.current);
+  }, []);
   return (
-    <div className="card xl:card-side shadow-xl bg-stone-100 xl:aspect-video">
+    <div
+      ref={domRef}
+      className={`${style["fade-in-section"]} ${
+        isVisible ? style["is-visible"] : ""
+      } card xl:card-side shadow-xl bg-stone-100 xl:aspect-video`}
+    >
       <figure className="xl:w-3/4 xl:h-full h-96">
         <div className="w-full h-full flex align-middle justify-center">
           {props.img && (
