@@ -116,7 +116,7 @@ export const jobs: Experiences = [
   {
     company: "NUS",
     position: "Teaching Assistant",
-    duration: "Aug 2022 - Nov 2022",
+    duration: "Aug 2022 - Dec 2022",
     description:
       "Taught a class of 8 computer science undergraduates the module CS1101S - Programming Methodology.",
     img: nus,
