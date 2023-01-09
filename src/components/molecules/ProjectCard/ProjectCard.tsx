@@ -9,7 +9,14 @@ const ProjectCard: React.FC<Project> = (props) => {
     <div className="card xl:card-side shadow-xl bg-stone-100 xl:aspect-video">
       <figure className="xl:w-3/4 xl:h-full h-96">
         <div className="w-full h-full flex align-middle justify-center">
-          <img alt={props.title} src={props.img} className="object-contain" />
+          {props.img && (
+            <img alt={props.title} src={props.img} className="object-contain" />
+          )}
+          {props.video && (
+            <video className="object-contain" autoPlay muted loop>
+              <source src={props.video} type="video/mp4" />
+            </video>
+          )}
         </div>
       </figure>
       <div className="card-body xl:max-w-xs">

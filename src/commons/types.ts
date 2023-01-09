@@ -21,7 +21,8 @@ export interface Project {
   title: string;
   description: string;
   technologies: Technologies;
-  img: string;
+  img?: string;
+  video?: string;
   url?: string;
   github?: string;
 }

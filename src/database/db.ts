@@ -35,7 +35,7 @@ export const projects: Projects = [
     title: "Castaway Podcast App",
     description:
       "Created a podcast streaming + livestreaming app that combines the functionality of Spotify and Houseparty. Achieved Apollo 11 Level in Orbital 2022.",
-    img: castaway,
+    video: castaway,
     technologies: [
       Technology.flutter,
       Technology["socket.io"],
@@ -57,7 +57,7 @@ export const projects: Projects = [
     title: "Customer Footfall Counter",
     description:
       "Developed a machine learning model to count the number of people entering and exiting a parameter through a CCTV footage.",
-    img: footfall,
+    video: footfall,
     technologies: [Technology.python, Technology.tensorflow],
     url: "https://github.com/yyj-02/Customer-Footfall-Counter",
   },
