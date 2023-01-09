@@ -101,7 +101,7 @@ export const technologies: Logos = [
   { name: "Firebase", img: firebase },
   { name: "Google Cloud Platform", img: gcp },
   { name: "Docker", img: docker },
-  { name: "WebSocket", img: socket },
+  { name: "Socket.io", img: socket },
 ];
 
 export const jobs: Experiences = [

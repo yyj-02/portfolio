@@ -1,22 +1,22 @@
-import c from "./c.png";
-import dart from "./dart.png";
-import docker from "./docker.png";
-import express from "./express.png";
-import firebase from "./firebase.png";
-import flutter from "./flutter.png";
+import c from "./c.svg";
+import dart from "./dart.svg";
+import docker from "./docker.svg";
+import express from "./express.webp";
+import firebase from "./firebase.svg";
+import flutter from "./flutter.svg";
 import gcp from "./gcp.png";
-import java from "./java.png";
-import js from "./js.png";
-import mongo from "./mongo.png";
+import java from "./java.svg";
+import js from "./js.svg";
+import mongo from "./mongo.svg";
 import postgresql from "./postgresql.svg";
-import python from "./python.png";
+import python from "./python.svg";
 import rails from "./rails.svg";
-import react from "./react.png";
+import react from "./react.svg";
 import ruby from "./ruby.svg";
-import socket from "./socket.png";
-import tailwind from "./tailwind.png";
-import ts from "./ts.png";
-import vue from "./vue.png";
+import socket from "./socket.svg";
+import tailwind from "./tailwind.svg";
+import ts from "./ts.svg";
+import vue from "./vue.svg";
 
 export {
   c,
