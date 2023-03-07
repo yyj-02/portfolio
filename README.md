@@ -12,4 +12,4 @@ React, Vue, MongoDB, PostgreSQL, Rails, Express, Tailwind, Docker, GCP, Flutter
 
 ## Interest 💖
 
-Data Engineering, Software Engineering, Machine Learning, Generative Adversarial Network
+Data Engineering, Software Engineering, Machine Learning, Generative Adversarial Network, Cloud Computing
