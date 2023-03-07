@@ -10,9 +10,9 @@ I'm a computer science undergraduate in NUS pursuing Machine Learning and Softwa
 
 Here are some of the projects I've been working on recently:
 
-* **NodeFlair**: Helping tech talents make better career decisions [NodeFlair's Website](https://www.nodeflair.com/) 
-* **Castaway Backend**: Designed and built the backend architecture for a livestream podcast application, which included a media server microservice [Castaway GitHub Repo](https://github.com/yyj-02/castaway-backend)
-* **Customer Footfall Counter**: Utilised computer vision to count customers entering and exiting a location via CCTV footage [GitHub Repo](https://github.com/yyj-02/Customer-Footfall-Counter)
+* **NodeFlair**: Helping tech talents make better career decisions [[NodeFlair's Website]](https://www.nodeflair.com/) 
+* **Castaway Backend**: Designed and built the backend architecture for a livestream podcast application, which included a media server microservice [[Castaway GitHub Repo]](https://github.com/yyj-02/castaway-backend)
+* **Customer Footfall Counter**: Utilised computer vision to count customers entering and exiting a location via CCTV footage [[GitHub Repo]](https://github.com/yyj-02/Customer-Footfall-Counter)
 
 You can find more of my projects on my [GitHub Profile](https://github.com/yyj-02) or my [Portfolio Website](https://yeohyongjie.com).
 
